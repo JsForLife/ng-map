@@ -1,0 +1,11 @@
+<div class="tenXunMap clearfix" ng-style="mapStyle">
+    <div id="infoDiv" class="info" ng-show="isFind=='true'"></div>
+    <div id="errorDiv" class="info errorInfo" ng-show="isFind=='false'">
+        <p class="head pad-left-10">共找到0家门店</p>
+        <div class="tip">
+            找不到合适门店？
+            <a ng-click="isFind=''">标注新门店</a>
+        </div>
+    </div>
+    <div id="container" class="mapStyle" ng-class="{'maxMap':isFind==''}"></div>
+</div>
