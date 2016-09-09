@@ -1,12 +1,14 @@
 # ng-map
 A map for angular with tencentMap in PC
 
+
 一、添加以下代码进控制器
 require('tenCentMap')		//CMD规范，你可以按需求用AMD加入依赖
 //if use for search
 $scope.searchTouch = function(){
       $scope.$broadcast('mapSearch')
 }
+
 
 二、在引用的页面添加以下代码
 <!--if just for show-->
@@ -30,6 +32,7 @@ $scope.searchTouch = function(){
 <button ng-click="searchTouch()">search</button>
 <ten-cent-map type="'edit'" province="provinceId" city="cityId"  area="areaId" address="streetAddress"  lat-lng="latLng" area-arr="areas" ></ten-cent-map>
 
+
 三、指令内部逻辑
 1.配置项
 scope: {
@@ -51,6 +54,7 @@ scope: {
         telCode: '=',                  //门店固话的除区号外的部分
 }
 
+
 2.内部公共对象
 geocoder：精确查询对象，用于设置精确查询方法
 searchService：模糊查询对象，用于设置模糊查询方法
@@ -58,6 +62,7 @@ map：地图对象，配置地图杂项
 infoWin：左侧搜索结果展示对象
 markers：地图所以标点的集合，数组格式
 preLatLng ：最近一次点击的地图标点的坐标
+
 
 3.主要api
 （1）initMarker：初始化地图中心和地图标志的方法
